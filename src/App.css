@@ -1,0 +1,30 @@
+/* src/ClockAnimation.css */
+.clock {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  overflow: hidden; 
+}
+
+.leg {
+  position: absolute;
+  width: 2px;
+  height: 150px;
+  background-color: red;
+  transform-origin: bottom center;
+  top: 0%;
+  z-index: 5;
+}
+
+.image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
