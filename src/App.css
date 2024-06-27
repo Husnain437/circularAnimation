@@ -1,30 +1,465 @@
-/* src/ClockAnimation.css */
+/* Circular Animation css Start */
+.app{
+  width: 100%;
+
+}
 .clock {
+  width: 100%;
   position: relative;
-  width: 300px;
-  height: 300px;
-  border: 2px solid #000;
+  max-width: 450px;
+  height: 450px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  overflow: hidden; 
+  overflow: hidden;transform: rotate(218deg);
+
+  
 }
 
 .leg {
   position: absolute;
   width: 2px;
-  height: 150px;
-  background-color: red;
+  height: 50%;
+  background-color: black;
   transform-origin: bottom center;
   top: 0%;
   z-index: 5;
+  display: none;
+}
+.circle {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 100px;
+  background-color: #000;
+  z-index: 99;
 }
 
 .image {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  transform: rotate(-220deg);
+  
+  
+  
+}
+.counting{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2rem;
+  margin: 20px;
+  width: 13%;
+}
+.middle-lower{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 50px 0 50px;
+  align-items: center;
+  
+}
+.black-btn{
+  padding: 10px 20px 10px 20px;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin: 20px;
+  
+}
+.cords{
+  font-size: 3rem;
+  margin: 20px;
 }
 
+@media(max-widht:480px){
+  
+  .cords{
+    font-size: 1rem !important;
+  }
+
+}
+/* Circular animation css end */
+
+/* Grid Animation Css Start */
+.grid_animation {
+  width: 100%;
+ 
+  background-image: url(./assets/banner2.jpg);
+}
+
+.gr {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  
+}
+
+.card {
+  
+  height: 33vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.card:hover {
+  background-color: white;
+  color: black;
+}
+.card:hover .trans-btn{
+  color: #000;
+  border: 1px solid#000;
+}
+.card:hover .bl-btn{
+  background-color: #000;
+  color: white;
+}
+.border-bot {
+  position: absolute;
+  background-color: white;
+  height: 3px;
+  width: 100%;
+  bottom: 0;
+}
+.border-right {
+  position: absolute;
+  background-color: white;
+  height: 100%;
+  width: 3px;
+  right: 0;
+}
+.txt{
+  padding: 10px;
+}
+.card-content{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px 0 10px;
+}
+.btn-flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin: 0 10px 0 10px;
+}
+.trans-btn{
+  width: 150px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: transparent;
+  color: white;
+  padding: 10px 20px 10px 20px;
+  margin-bottom: 10px;
+}
+.bl-btn{
+  width: 150px;
+  border: none;
+  border-radius: 5px;
+  color: #000;
+  padding: 10px 20px 10px 20px;
+  background-color: white;
+  margin-bottom: 10px;
+}
+@media (max-width: 800px) {
+  .gr{
+    grid-template-columns: repeat(auto-fill, 50%);
+    
+  }
+  .border-bot {
+   display: none;
+  }
+  .border-right {
+   display: none;
+  }
+}
+@media (max-width: 480px) {
+ 
+  .bl-btn{
+    margin-bottom: 10px;
+  }
+  .gr{
+    grid-template-columns: repeat(auto-fill, 100%);
+    height: 100%;
+  }
+}
+/* Grid animation Css ends */
+
+/* Home Css Start */
+
+.banner {
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner-div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: absolute;
+}
+.banner-img {
+  margin: auto;
+}
+.left-text{
+  text-align: left;
+  margin-left: 40px;
+  position: absolute;
+  top: 15%;
+  
+}
+.right-text{
+  right: 2%;
+  position: absolute;
+  top: 35%;
+  font-size: 4rem;
+  color: white;
+}
+.text {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+/* .text-2 {
+  position: absolute;
+  width: 100%;
+} */
+.home-text{
+  position: absolute;
+  top: 70%;
+  width: 30%;
+  margin-left: 40px;
+  color: white;
+  text-align: left;
+  font-size: 1rem;
+  padding-bottom: 10px;
+}
+.t2 {
+  text-align: right;
+}
+.larg-font {
+ 
+  font-size: 4rem;
+  color: white;
+ 
+}
+.white-btn{
+  width: 100%;
+  text-align: right; 
+  
+  
+}
+.btn{
+  width: 200px;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  position: absolute;
+  background-color: white;
+  right: 40px;
+  top: 50%;
+}
+
+.navbar {
+  padding-top: 10px;
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+}
+.main-mid{
+  position: relative;
+}
+
+.middle{
+  width: 100%;
+  overflow: hidden;
+}
+
+.middle_animations{
+  padding: 40px 40px 0px 40px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.line{
+    
+    position: absolute;
+    height: 2px !important;
+    background-color: #000;
+    left: 29%;
+    transform-origin: left;
+    transform: rotate(308deg);
+    z-index: 5;
+}
+.loc{
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 20%;
+}
+
+
+@media (max-width: 1200px) {
+ .left-text{
+  top:10%
+ }
+  .btn{
+  top:50%
+ }
+  
+}
+
+@media (max-width: 960px) {
+ 
+  .middle_animations{
+    justify-content: center;
+  }
+  .home-text{
+    top: 80%;
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  
+  .btn {
+    top: 50%;
+    width: 150px !important;
+    font-size: 0.7rem;
+}
+  .middle_animations{
+    justify-content: center;
+  }
+  .home-text{
+    top: 80%;
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .larg-font{
+    font-size: 3rem;
+  }
+  .left-text{
+    top: 8%;
+  }
+  .btn{
+    top: 50%;
+    width: 100px !important;
+    
+  }
+  .banner{
+    height: 100vh;
+  }
+  .middle_animations{
+    justify-content: center;
+  }
+  .middle-lower{
+    justify-content: center;
+  }
+  .home-text {
+    top: 80%;
+    width: 75%;
+}
+}
+
+
+/* Home Css End */
+
+/* Navbar css start */
+.nav {
+  color: white;
+  padding: 0px 10px 0 20px;
+  align-items: center;
+  justify-content: space-around;
+
+  
+}
+.uper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.icon {
+  height: 30px;
+  margin: 8px;
+  cursor: pointer;
+}
+.ln {
+  height: 1px;
+  width: 100%;
+  background-color: white;
+}
+.lower {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.lower-right {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+.lower-text {
+  padding: 0 10 0 10;
+  font-weight: bold;
+  font-size: 3vh;
+  cursor: pointer;
+}
+.upper-left {
+  display: flex;
+  width: 15%;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-mob{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px 0 20px;
+  display: none ;
+}
+.logo{
+  font-size: large;
+  color: white;
+}
+@media (max-width: 768px) {
+ .nav-mob{
+  display: flex;
+ }
+ .nav{
+  display: none;
+ }
+}
+
+/* Navbar css End */
